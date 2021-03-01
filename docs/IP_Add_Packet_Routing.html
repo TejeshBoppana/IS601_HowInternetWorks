@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>How The Internet Works</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="about.css"/>
+</head>
+<body>
+
+<!-- Nav Bar Code -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="index.html">IS601 Project</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li>
+                <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li>
+                <a class="nav-link" href="aboutpage.html">About</a>
+            </li>
+
+            <li class="nav-item dropdown active">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown"
+                   aria-haspopup="true" aria-expanded="false">
+                    How The Internet Works
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="Domain_Names_ICANN.html">Domain Names and ICANN</a>
+                    <a class="dropdown-item" href="IP_Add_Packet_Routing.html">IP Addresses, Packets and Routing</a>
+                    <a class="dropdown-item" href="DNS.html">DNS</a>
+                    <a class="dropdown-item" href="HTTP_HTTPS_Protocols.html">HTTP and HTTPS Protocols</a>
+                    <a class="dropdown-item" href="W3C_HTML_CSS.html">W3C and HTML and CSS</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div class="jumbotron jumbotron-fluid" id="aboutJumbotron">
+    <div class="container">
+        <h1 class="display-4">IP Addresses, Packets and Routing</h1>
+    </div>
+</div>
+<div class="container mt-3">
+    <div class="row">
+        <div class="col-8">
+            <h4>IP Address</h4>
+            <p class="text-justify">An Internet Protocol address (IP address) is a numerical label assigned to each device connected to a computer network that uses the Internet Protocol for communication. An IP address serves two main functions: host or network interface identification and location addressing.</p>
+            <p class="text-justify"><b>How IP works:</b> IP is designed to work over a dynamic network. This means that IP must work without a central directory or monitor, and that it cannot rely upon specific links or nodes existing. IP is a connectionless protocol that is datagram-oriented., so each packet must contain the source IP address, destination IP address, and other data in the header to be successfully delivered.Combined, these factors make IP an unreliable, best effort delivery protocol. Error correction is handled by upper level protocols instead. These protocols include TCP, which is a connection-oriented protocol, and UDP, which is a connectionless protocol. Most internet traffic is TCP/IP.</p>
+            <p class="text-justify"><b>IP versions:</b> There are two versions of IP in use today, IPv4 and IPv6. The original IPv4 protocol is still used today on both the internet, and many corporate networks. However, the IPv4 protocol only allowed for 232 addresses. This, coupled with how addresses were allocated, led to a situation where there would not be enough unique addresses for all devices connected to the internet.IPv6 was developed by the Internet Engineering Task Force (IETF), and was formalized in 1998. This upgrade substantially increased the available address space and allowed for 2128 addresses. In addition, there were changes to improve the efficiency of IP packet headers, as well as improvements to routing and security.</p>
+            <p class="text-justify"><b>IPv4 addresses:</b> IPv4 addresses are actually 32-bit binary numbers, consisting of the two sub addresses (identifiers) mentioned above which, respectively, identify the network and the host to the network, with an imaginary boundary separating the two. An IP address is, as such, generally shown as 4 octets of numbers from 0-255 represented in decimal form instead of binary form.For example,the address 168.212.226.204 represents the 32-bit binary number 10101000.11010100.11100010.11001100. in IPv4.</p>
+
+             <p class="text-justify">The binary number is important because that will determine which class of network the IP address belongs to.IPv4 addresses are composed of two parts. The first numbers in the address specify the network, while the latter numbers specify the specific host. A subnet mask specifies which part of an address is the network part, and which part addresses the specific host.A packet with a destination address that is not on the same network as the source address will be forwarded, or routed, to the appropriate network. Once on the correct network, the host part of the address determines which interface the packet gets delivered to.</p>
+            <p class="text-justify"><b>IPv6 addresses:</b> To avoid the seemingly reoccurring issue in technology, where a specification’s limitation seems more than sufficient at the time, but inevitably becomes too small, the designers of IPv6 created an enormous address space for IPv6. The address size was increased from 32 bits in IPv4 to 128 bits in IPv6.The IPv6 has a theoretical limit of 3.4 x 1038 addresses. That’s over 340 undecillion addresses, which is reportedly enough addresses to assign one to every single atom on the surface of the earth.IPv6 addresses are represented by eight sets of four hexadecimal digits, and each set of numbers is separated by a colon.An example IPv6 address would look like this: 2DAB:FFFF:0000:3EAE:01AA:00FF:DD72:2C4A</p>
+            <h6 class="text-center"></h6>
+            <p class="text-justify">With IPv6 addresses being so long, there are conventions to allow for their abbreviation. First, leading zeros from any one group of numbers may be eliminated. For example, :0033: can be written as :33:Second, any consecutive sections of zeros can be represented by a double colon. This may be done only once in any address. The number of sections removed using this abbreviation can be determined as the number required to bring the address back up to eight sections.Like in IPv4 certain address blocks are reserved for private networks. These addresses are not routed over the public internet. In IPv6, private addresses are called Unique Local Addresses (ULA). Addresses from the FC00:: /7 block are ignored and not routed by default.</p>
+            <p class="text-justify"><b>Name resolution:</b>
+            <p class="text-justify">In both IPv4 and IPv6, remembering the IP address of every device is not possible, except on the smallest of networks. Name resolution provides a way to lookup an IP address from an easier to use name.On the internet, name resolution is handled by the Domain Name System (DNS). With DNS, a name in the format host. Domain can be used in place of the destination’s IP address. When the connection is initiated, the source host will request the IP address of the destination host from a DNS server. The DNS server will reply with the destination’s IP address. This IP address will then be used for all communications sent to that name.</p>
+            <br>
+            <h3 class="text-left">Packets:</h3>
+            <p class="text-justify">A packet is a small amount of data sent over a network, such as a LAN or the Internet. Similar to a real-life package, each packet includes a source and destination as well as the content (or data) being transferred. When the packets reach their destination, they are reassembled into a single file or other contiguous block of data.While the exact structure of a packet varies between protocols, a typical packet includes two sections — a header and payload. Information about the packet is stored in the header. For example, an IPv6 header includes the following fields:</p>
+            <ul>
+                <li>Source address (128 bits) - IPv6 address of the packet origin</li>
+                <li>Destination address (128 bits) - IPv6 address of the packet destination</li>
+                <li>Version (4 bits) - "6" for IPv6</li>
+                <li>Traffic class (8 bits) - priority setting for the packet</li>
+                <li>Flow label (20 bits) - optional ID that labels the packet as part of a specific flow; used to distinguish between multiple transmissions from a single origin</li>
+                <li>Payload length (16 bits) - size of the data, defined in octets</li>
+                <li>Next header (8 bits) - ID of the header following the current packet; may be TCP, UDP, or another protocol</li>
+                <li>Hop limit (8 bits) - maximum number of network hops (between routers, switches, etc) before the packet is dropped; also known as "TTL" in IPv4</li>
+            </ul>
+
+
+            <br>
+            <p class="text-justify">The payload section of a packet contains the actual data being transferred. This is often just a small part of a file, webpage, or other transmission, since individual packets are relatively small. For example, the maximum size of an IP packet payload is 65,535 bytes, or 64 kilobytes. The maximum size of an Ethernet packet or "frame" is only 1,500 bytes or 1.5 kilobytes.Packets are intended to transfer data reliably and efficiently. Instead of transferring a large file as a single block of data, sending smaller packets helps ensure each section is transmitted successfully. If a packet is not received or is "dropped," only the dropped packet needs to be resent. Additionally, if a data transfer encounters network congestion due to multiple simultaneous transfers, the remaining packets can be rerouted through a less congested path.</p>
+            <br>
+            <h3 class="text-left">Routers and Routing:</h3>
+            <p class="text-justify">Routers got their name because they route IP Packets across networks: a router device connects different links. It examines IP packet headers, looking at the destination address and consulting a routing table of known networks. The table indicates which connections to send the packet on as the next link. The connections on a router are called interfaces: through the router, they interface between different link types.</p>
+
+            <br>
+            <p class="text-justify">In the image, an IP packet arrives at a router, which compares the packet’s destination address with the networks in the routing table. The packet is identified as belonging to network A, so the router routes it out of interface 1. Often, routers learn how to reach distant networks by exchanging information with their neighbouring routers and building their own routing tables. This exchange of information to learn about other networks is called a routing protocol.</p>
+
+        </div>
+        <div class="col-4 mt-3">
+            <div class="card" style="width: 24rem;">
+                <img class="card-img-top" src="images/ipAddress.jpg"
+                     alt="Domain_Names_ICANN">
+                <div class="card-body">
+                    <p class="card-text">This image shows the difference between an IPv4 address and an IPv6
+                            address. Pay attention to the number of octets! IPv4 has 4 octets and IPv6 has 16 octets.</p>
+                </div>
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br><br>
+
+
+
+
+
+            <br>
+            <br>
+            <div class="card" style="width: 24rem;">
+                <img class="card-img-top" src="images/new-packet.png" style="height: 200px"
+                     alt="Domain_Names_ICANN">
+                <div class="card-body">
+                    <p class="card-text">This images shows a packet being sent from the sender to the recipient via
+                            the Internet.</p>
+                </div>
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br><br> <br>
+            <br>
+            <br>
+            <br><br><br>
+            <br>
+            <br><br>
+            <br>
+            <br>
+
+
+
+            <div class="card" style="width: 24rem;">
+                <img class="card-img-top" src="images/new-IPPacketRouting.png"
+                     alt="Domain_Names_ICANN">
+                <div class="card-body">
+                    <p class="card-text">This image shows the process an IP packet undergoes, which is what we
+                            talk about here on this page! The user send the packet to a router, which uses its routing
+                            table to send the packet to the destination address or addresses using the fastest possible
+                            path.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+</div>
+
+<!-- JavaScript For Home Page -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+
+</body>
+</html>
