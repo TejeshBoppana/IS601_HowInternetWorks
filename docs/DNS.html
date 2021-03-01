@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>How The Internet Works</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="about.css"/>
+</head>
+<body>
+
+<!-- Nav Bar Code -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="index.html">IS601 Project</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li>
+                <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li>
+                <a class="nav-link" href="aboutpage.html">About</a>
+            </li>
+
+            <li class="nav-item dropdown active">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown"
+                   aria-haspopup="true" aria-expanded="false">
+                    How The Internet Works
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="Domain_Names_ICANN.html">Domain Names and ICANN</a>
+                    <a class="dropdown-item" href="IP_Add_Packet_Routing.html">IP Addresses, Packets and Routing</a>
+                    <a class="dropdown-item" href="DNS.html">DNS</a>
+                    <a class="dropdown-item" href="HTTP_HTTPS_Protocols.html">HTTP and HTTPS Protocols</a>
+                    <a class="dropdown-item" href="W3C_HTML_CSS.html">W3C and HTML and CSS</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div class="jumbotron jumbotron-fluid" id="aboutJumbotron">
+    <div class="container">
+        <h1 class="display-4">Domain Name System(DNS)</h1>
+    </div>
+</div>
+<div class="container mt-3">
+    <div class="row">
+        <div class="col-8">
+            <p>Domain Name System(DNS) is a vital link in the Internet infrastructure. It is the bridge between the user friendly names that make the Internet easy to use and the complex IP address required on the router and server sides. Computers and devices on the Internet use an IP address to route the request to the site you are trying to reach. When the user tries to connect to a website, the translation to the IP address is done through a process called DNS name resolution. It is the DNS server that performs this resolution.</p>
+            <p>DNS is a hierarchical and distributed naming system for devices on the Internet. Like other critical infrastructure that supports the Internet, DNS is highly decentralized system that supports a distributed directory service for devices on the Internet.</p>
+            <p>When you connect to a network, it also provides access to a DNS server. In small networks, the router might itself provide this service. In large networks, there will be one or more dedicated DNS servers that provide this service. Due to the decentralized nature of the system, the "directory" is spread across different computers on the Internet. If the local DNS server can resolve a query, it'll do so itself. When a devices queries a DNS server for an address it does not have, it sends the request to another DNS server(s) if a resolution can be obtained in a reasonable time. The local DNS server also caches requests for future use so it can resolve the requests itself instead of having to reach out to other servers.</p>
+            <p>The DNS server in the local network is called Start of Authority(SOA) for that domain. Over time, the results from looking up hosts at the SOA will propagate to other DNS servers. How long these results stay on the remote servers depends on the Time To Live (TTL) parameter which each DNS server can set for it's results propagating across the Internet.</p>
+
+
+
+
+        </div>
+        <div class="col-4 mt-3">
+            <div class="card" style="width: 24rem;">
+                <img class="card-img-top" src="images/DNS.png"
+                     alt="Domain_Names_ICANN">
+                <div class="card-body">
+                    <p class="card-text">This diagram shows how the DNS works from end user to DNS. The example in the diagram is amazon.com.</p>
+                </div>
+            </div>
+            <br>
+            <div class="card" style="width: 24rem;">
+                <img class="card-img-top" src="images/DNS_logo.jpg"
+                     alt="Domain_Names_ICANN">
+                <div class="card-body">
+                    <p class="card-text">Domain Name Systems Logo</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<!-- JavaScript For Home Page -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+
+</body>
+</html>
