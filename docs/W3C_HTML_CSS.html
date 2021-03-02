@@ -82,39 +82,6 @@
     </div>
 
 
-            <br>
-            <p class="text-justify">The payload section of a packet contains the actual data being transferred. This is often just a small part of a file, webpage, or other transmission, since individual packets are relatively small. For example, the maximum size of an IP packet payload is 65,535 bytes, or 64 kilobytes. The maximum size of an Ethernet packet or "frame" is only 1,500 bytes or 1.5 kilobytes.Packets are intended to transfer data reliably and efficiently. Instead of transferring a large file as a single block of data, sending smaller packets helps ensure each section is transmitted successfully. If a packet is not received or is "dropped," only the dropped packet needs to be resent. Additionally, if a data transfer encounters network congestion due to multiple simultaneous transfers, the remaining packets can be rerouted through a less congested path.</p>
-            <br>
-            <h3 class="text-left">Routers and Routing:</h3>
-            <p class="text-justify">Routers got their name because they route IP Packets across networks: a router device connects different links. It examines IP packet headers, looking at the destination address and consulting a routing table of known networks. The table indicates which connections to send the packet on as the next link. The connections on a router are called interfaces: through the router, they interface between different link types.</p>
-
-            <br>
-            <p class="text-justify">In the image, an IP packet arrives at a router, which compares the packet’s destination address with the networks in the routing table. The packet is identified as belonging to network A, so the router routes it out of interface 1. Often, routers learn how to reach distant networks by exchanging information with their neighbouring routers and building their own routing tables. This exchange of information to learn about other networks is called a routing protocol.</p>
-
-        </div>
-        <div class="col-4 mt-3">
-            <div class="card" style="width: 24rem;">
-                <img class="card-img-top" src="images/ipAddress.jpg"
-                     alt="Domain_Names_ICANN">
-                <div class="card-body">
-                    <p class="card-text">This image shows the difference between an IPv4 address and an IPv6
-                            address. Pay attention to the number of octets! IPv4 has 4 octets and IPv6 has 16 octets.</p>
-                </div>
-            </div>
-
-
-
-
-            <br>
-            <br>
-            <div class="card" style="width: 24rem;">
-                <img class="card-img-top" src="images/new-packet.png" style="height: 200px"
-                     alt="Domain_Names_ICANN">
-                <div class="card-body">
-                    <p class="card-text">This images shows a packet being sent from the sender to the recipient via
-                            the Internet.</p>
-                </div>
-            </div>
 
 <!-- JavaScript For Home Page -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
